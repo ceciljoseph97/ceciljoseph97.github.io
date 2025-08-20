@@ -383,6 +383,33 @@
         </video>
       </div>
     </section>
+	<!-- Novelty Detection Project: a short abstract and image demonstrating OOD detection -->
+    <section class="section novelty-detection">
+      <h2><span class="section-icon">📷</span>CUAS_Sensory Novelty Detection</h2>
+      <p>
+        This project combines a Conditional Variational Autoencoder (CVAE) with a YOLOv8 detector to flag novel objects in drone imagery. Part of a highere vertical for CUAS_Sensory, The CVAE learns a latent space of known object classes and uses reconstruction error and Mahalanobis distance to score candidate patches.  YOLO provides bounding boxes, while a sliding‑window heatmap highlights regions with unusually high reconstruction loss.  Detections are labelled as “OK” or “Novel” depending on whether they exceed calibrated thresholds.  The example below shows a drone marked as novel due to unusual geometry and a high reconstruction error.
+      </p>
+      <div class="media">
+        <figcaption><em>An example of the CVAE + YOLO pipeline flagging a novel drone (red border) with an OOD heatmap overlay.</em></figcaption>
+        <img src="yolocvae.png" alt="CUAS_Vision Novelty detection demonstration">
+      </div>
+    </section>
+	<!-- UAV RF & Audio Classification (CUAS_Sensory) -->
+	<section class="section uav-radar">
+	  <h2><span class="section-icon">📡</span>CUAS_Sensory UAV RF &amp; Audio Classification</h2>
+	  <p>
+		As part of the <strong>CUAS_Sensory</strong> module, this project trains a machine‑learning model to recognize UAVs from their radio‑frequency (RF) emissions.  Complex I/Q data are converted into power spectral density (PSD) features using Welch’s method, then downsampled into fixed‑length vectors.  A Random Forest classifier identifies drone types, bands and ranges from these RF signatures.
+	  </p>
+	  <p>
+		The same PSD feature pipeline applies seamlessly to acoustic recordings: by converting I/Q signals into audio or loading standard audio files, the classifier can operate on microphone data as well as spectrum captures.  This adaptability across <strong>audio</strong> and <strong>RF</strong> modalities demonstrates the multimodal design of the CUAS_Sensory stack, enabling UAV detection even when only one sensor type is available.
+	  </p>
+	  <div class="media">
+        <figcaption><em>This video demonstrates the ability of the model to Detect through audio inputs as well as rf signals.</em></figcaption>
+        <video controls>
+          <source src="soundcheck.mp4" type="video/mp4">
+        </video>
+      </div>
+	</section>
 
     <section class="section projects">
       <h2><span class="section-icon">🚀</span>Research Projects</h2>
@@ -391,8 +418,11 @@
         <li><strong><a href="https://github.com/ceciljoseph97/chatbot" target="_blank">Chatbot</a></strong> – NLP-powered chatbot using MapReduce concepts.</li>
         <li><strong><a href="https://github.com/ceciljoseph97/AFER" target="_blank">AFER</a></strong> – Advancements in Facial Emotion Recognition and multimodal emotion recognition models.</li>
         <li><strong><a href="https://github.com/ceciljoseph97/Braitenberg_Vehicles_unreal" target="_blank">Braitenberg Vehicles Unreal</a></strong> – Exploration of emergent behavior in autonomous robotics using Unreal Engine.</li>
+		<li><strong><a href="" target="_blank">CUAS_Sensory Novelty Detection </a></strong> Conditional Variational Autoencoder (CVAE) with a YOLOv8 detector to flag novel objects in drone imagery.</li>
+		<li><strong><a href="" target="_blank">CUAS_Sensory UAV RF </a></strong> Machine‑learning model to recognize UAVs from their radio‑frequency (RF) emissions.</li>
       </ul>
     </section>
+
   </div>
 <script>
 // Animate skills list items on scroll into view
